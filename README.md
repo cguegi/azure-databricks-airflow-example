@@ -1,2 +1,4 @@
 # azure-databricks-airflow-example
-Demo orchestrating a data pipeline based on Azure Databricks jobs using [Apache Airflow](https://airflow.apache.org/)
+Demo orchestrating a data pipeline based on Azure [Databricks](https://databricks.com/) jobs using [Apache Airflow](https://airflow.apache.org/)
+
+Databricks offers an Airflow operator to submit jobs in Databricks. The Databricks Airflow operator calls the [Jobs Run API](https://docs.databricks.com/dev-tools/api/latest/jobs.html#jobsjobsservicerunnow) to submit jobs. These APIs automatically create new clusters (aka ephemeral job clusters) to run the jobs and also terminates them after running it. This will minimize cost because in that case you will be charged at lower Data Engineering DBUs.
