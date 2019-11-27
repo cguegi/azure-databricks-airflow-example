@@ -1,2 +1,2 @@
 # azure-databricks-airflow-example
-Example of orchestrating dependent Databricks jobs using Airflow
+Demo orchestrating data pipeline based on Azure Databricks jobs using [Apache Airflow](https://airflow.apache.org/)
