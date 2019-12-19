@@ -43,7 +43,7 @@ with DAG(dag_id='adb_pipeline', default_args=args, start_date=airflow.utils.date
 	json_3 = {
 		"notebook_params": {
 			'bronzePath': '/bronze/',
-			'silverPath': '/silber'
+			'silverPath': '/silver'
 		}
 	}
 
