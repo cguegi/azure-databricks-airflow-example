@@ -14,7 +14,7 @@ args = {
 
 # DAG with Context Manager
 # refer to https://airflow.apache.org/docs/stable/concepts.html?highlight=connection#context-manager
-with DAG(dag_id='adb_pipeline', default_args=args, start_date=airflow.utils.dates.days_ago(1), schedule_interval='0/30 * * * *') as dag:
+with DAG(dag_id='adb_pipeline', default_args=args, start_date=airflow.utils.dates.days_ago(1), schedule_interval='30 4 * * *') as dag:
 
 	# job 1 definition and configurable through the Jobs UI in the Databricks workspace
 	notebook_1_task = DatabricksRunNowOperator(
