@@ -28,6 +28,8 @@ airflow connections --add \
 #### Creating the Airflow DAG for the data pipline
 Airflow workflows are defined in Python scripts, which provide a set of building blocks to communicate with a wide array of technologies (bash scripts, python functions etc.). Basically, a workflow consist of a series of tasks modeled as a Directed Acyclic Graph or DAG.
 
+Default script location: `~/airflow/dags/`
+
 ```python
 import airflow
 from airflow import DAG
