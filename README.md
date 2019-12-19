@@ -88,5 +88,7 @@ with DAG(dag_id='adb_pipeline', default_args=args, start_date=airflow.utils.date
 ```
 
 To see the full list of DAGs available, run `airflow list_dags`.
-If you want to test certain tasks, run `airflow test adb_pipeline notebook_2_task 2019-12-19T10:03:00`.
+
+If you want to test certain tasks, run `airflow test adb_pipeline notebook_2_task 2019-12-19T10:03:00`. 
+
 You can enable or trigger your DAG in the scheduler using the web UI or trigger it manually using: `airflow trigger_dag adb_pipeline`.
