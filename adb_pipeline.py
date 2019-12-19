@@ -14,6 +14,7 @@ args = {
 
 # DAG with Context Manager
 # refer to https://airflow.apache.org/docs/stable/concepts.html?highlight=connection#context-manager
+# trigger workflow daily at 04:30 am
 with DAG(dag_id='adb_pipeline', default_args=args, start_date=airflow.utils.dates.days_ago(1), schedule_interval='30 4 * * *') as dag:
 
 	# job 1 definition and configurable through the Jobs UI in the Databricks workspace
