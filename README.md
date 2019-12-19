@@ -26,9 +26,7 @@ airflow connections --add \
 7. Open the airflow web UI: `http://<hostname>:8080` and click on 'Admin' and select 'Connections'. Check the adb_workspace connection.
 
 #### Creating the Airflow DAG for the data pipline
-Airflow workflows are defined in Python scripts, which provide a set of building blocks to communicate with a wide array of technologies. Basically, a workflow consist of a series of tasks modeled as a Directed Acyclic Graph or DAG.
-
-Store the script in ~/airflow/dags/
+Airflow workflows are defined in Python scripts, which provide a set of building blocks to communicate with a wide array of technologies (bash scripts, python functions etc.). Basically, a workflow consist of a series of tasks modeled as a Directed Acyclic Graph or DAG.
 
 ```python
 import airflow
@@ -86,8 +84,9 @@ with DAG(dag_id='adb_pipeline', default_args=args, start_date=airflow.utils.date
 
 	# Define the order in which these jobs must run using lists
 	[notebook_1_task, notebook_2_task] >> notebook_3_task
+
 ```
 
-To see the full list of DAGs available, run `airflow list_dags`
-If you want to test certain tasks, run `airflow test adb_pipeline notebook_2_task 2019-12-19T10:03:00`
-You can enable or trigger your DAG in the scheduler using the web UI or trigger it manually using: `airflow trigger_dag adb_pipeline`
+To see the full list of DAGs available, run `airflow list_dags`.
+If you want to test certain tasks, run `airflow test adb_pipeline notebook_2_task 2019-12-19T10:03:00`.
+You can enable or trigger your DAG in the scheduler using the web UI or trigger it manually using: `airflow trigger_dag adb_pipeline`.
